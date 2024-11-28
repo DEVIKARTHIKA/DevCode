@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Wellness</title>
+    <link rel = "stylesheets" href = "./styles.css" type = "text/css">
+</head>
+<body>
+    <header>
+        <h1>Mental Wellness</h1>
+        <p style="color: white;"><b>Take a deep breath. You're doing great!</b></p>
+    </header>
+
+    <main>
+        <!-- Breathing Exercise -->
+        <section id="breathing">
+            <h2>Breathing Exercise</h2>
+            <div id="circle-container">
+                <div id="circle"></div>
+            </div>
+            <p id="breathe-instruction">Inhale</p>
+            <center><button id="start-breathing"><b>Start Breathing Exercise</b></button>
+	    <button id="stop-breathing"><b>Stop Breathing Exercise</b></button>
+                <button id="start-timer"><b>Start 2-Min Exercise</b></button>
+            </center>
+            <p id="exercise-timer">00:00</p>
+        </section>
+
+        <!-- Inspirational Quotes -->
+        <section id="quote">
+            <h2>Inspirational Quote</h2>
+            <blockquote id="quote-text">"You are stronger than you think."</blockquote>
+            <center><button id="new-quote"><b>Get New Quote</b></button></center>
+            
+        </section>
+
+        <!-- Stress Relief Tips -->
+        <section id="tips">
+            <h2>Stress Relief Tips</h2>
+            <ul>
+                <li>Take deep breaths and focus on your breathing.</li>
+                <li>Go for a short walk to clear your mind.</li>
+                <li>Talk to a friend or loved one.</li>
+                <li>Write down your thoughts in a journal.</li>
+                <li>Try meditation for a few minutes.</li>
+            </ul>
+        </section>
+
+        <!-- Mood Tracker -->
+        <section id="mood-tracker">
+            <h2>Mood Tracker</h2>
+            <label for="mood">How are you feeling today?</label>
+            <select id="mood">
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="anxious">Anxious</option>
+                <option value="calm">Calm</option>  
+            </select>
+            <center><button id="track-mood"><b>Track Mood</b></button></center>
+            
+            <p id="mood-log"></p>
+        </section>
+
+  <!-- Music Section -->
+  <div class="music">
+    <h2>Calm your mind with music</h2>
+    <center>
+        <button onclick="playMusic()"><b>Play Relaxing Music</b></button>
+        <button onclick="stopMusic()"><b>Stop Music</b></button>
+    </center>
+    
+    <audio id="relaxMusic" loop>
+      <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mp3">
+    </audio>
+  </div>
+
+  <!-- Chatbot Section -->
+  <div class="chatbot">
+    <h2>Talk to our Wellness Chatbot</h2>
+    <center><button onclick="toggleChat()"><b>Open Chat</b></button></center>
+    <div class="chat-container" id="chatbox">
+      <h3>Wellness Bot</h3>
+      <div class="chat-log" id="chatLog"></div>
+      <input type="text" id="chatInput" placeholder="Ask something..." onkeydown="if(event.key === 'Enter') sendMessage()">
+    </div>
+  </div>
+    </main>
+
+    <script src = "javascript.js">
+    </script>
+</body>
+</html>
